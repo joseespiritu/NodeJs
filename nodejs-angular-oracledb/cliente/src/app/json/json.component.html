@@ -1,0 +1,22 @@
+<div class="container p-5">
+  <br /><br /><br /><br />
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Correo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of allPerson">
+        <th scope="row">{{ p.ID }}</th>
+        <th scope="row">{{ p.NOMBRE }}</th>
+        <th scope="row">{{ p.APELLIDO }}</th>
+        <th scope="row">{{ p.CORREO }}</th>
+      </tr>
+    </tbody>
+  </table>
+  <br /><br /><br /><br />
+</div>
