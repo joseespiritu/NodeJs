@@ -1,7 +1,7 @@
 const express = require('express');
 const tourController = require('../controllers/tourController');
 const authController = require('../controllers/authController');
-const reviewRouter = require('../routes/reviewRoutes');
+const reviewRouter = require('./reviewRoutes');
 
 const router = express.Router();
 
@@ -37,6 +37,16 @@ router
 router
     .route('/top-5-cheap')
     .get(tourController.aliasTopTours, tourController.getAllTours);
+
+// /tours-distance?distance=233&center=-40,45$unit=mi
+// /tours-distance/233/center/-40,45/unit/mi
+router
+    .route('/tours-within/:distance/center/:latlng/unit/:unit')
+    .get(tourController.getToursWithin);
+
+router
+    .route('/distances/:latlng/unit/:unit')
+    .get(tourController.getDistances);
 
 router
     .route('/')
