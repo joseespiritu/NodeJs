@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
     <link
       href="https://fonts.googleapis.com/css?family=Lato:300,300i,700"
@@ -49,6 +50,7 @@
     <!-- In video, this <main> element is wrongly called: <section class="overview">. So in pug template, please use main.main instead of section.overview -->
     <main class="main">
       <div class="card-container">
+        
         <div class="card">
           <div class="card__header">
             <div class="card__picture">
